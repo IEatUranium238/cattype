@@ -127,9 +127,7 @@ public class Lexer {
       String line;
 
       while ((line = br.readLine()) != null) {
-        if (!line.isEmpty()){
-          linesTokens.add(readLine(line));
-        }
+        linesTokens.add(readLine(line));
       }
 
       return linesTokens;

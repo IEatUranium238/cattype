@@ -11,7 +11,7 @@ public class Getval {
   public static Object getVal(Map<String, Object> data, int lineNum) throws Exception {
     @SuppressWarnings("unchecked")
     ArrayList<Object> content = (ArrayList<Object>) data.get("content");
-    if (content.size() > 1) {
+    if (content.size() != 1) {
       throw new Exception("GETVAL accepts only 1 parameter on line: " + lineNum);
     }
 
@@ -31,9 +31,14 @@ public class Getval {
     MemObj res = (MemObj) Memory.getData(name);
 
     if (res == null) {
-      throw new Exception("Failed to get value '" + name + "' on line " + lineNum);
+      throw new Exception("Value '" + name + "' does not exist on line " + lineNum);
     }
 
-    return res.value;
+    String type = res.type;
+    if (type.equals("STR")){
+      return String.valueOf(res.value);
+    } else {
+      return Integer.parseInt(String.valueOf(res.value));
+    }
   }
 }

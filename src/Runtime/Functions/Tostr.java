@@ -9,7 +9,7 @@ public class Tostr {
   @SuppressWarnings("unchecked")
   public static Object tostr(Map<String, Object> data, int lineNum) throws Exception{
     ArrayList<Object> content = (ArrayList<Object>) data.get("content");
-    if (content.size() > 1) {
+    if (content.size() != 1) {
       throw new Exception("TOSTR accepts only 1 parameter on line: " + lineNum);
     }
     

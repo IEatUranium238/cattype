@@ -15,6 +15,8 @@ public class Executor {
         break;
       case "POINT":
         break;
+      case "NONE":
+        break;
       default:
         throw new Exception("Unknown AST type: " + ast.type);
     }

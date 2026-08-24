@@ -29,6 +29,7 @@ public class Main {
 
     } catch (Exception e) {
       System.out.println("Failed to run cattype program!\nError:\n" + e.getMessage());
+      System.err.println("-- DEBUG TRACE --");
       e.printStackTrace();
     }
   }

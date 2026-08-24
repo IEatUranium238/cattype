@@ -45,6 +45,11 @@ public class AST {
   }
 
   public static AstObj makeAst(ArrayList<String> tokens, int lineNum) throws Exception {
+    if (tokens.size() == 0) {
+      AstObj thisAst = new AstObj("NONE", null);
+      return thisAst;
+    }
+
     String cmd = tokens.get(0);
 
     switch (cmd) {
