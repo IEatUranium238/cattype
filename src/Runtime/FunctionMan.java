@@ -2,8 +2,8 @@ package Runtime;
 
 import java.util.Map;
 
-import Runtime.Functions.Other.Getval;
-import Runtime.Functions.Strings.Tostr;
+import Runtime.Functions.Getval;
+import Runtime.Functions.Tostr;
 
 public class FunctionMan {
   public static Object manageFunction(Map<String, Object> data, int lineNum) throws Exception {

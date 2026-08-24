@@ -1,4 +1,4 @@
-package Runtime.Functions.Other;
+package Runtime.Functions;
 
 import java.util.ArrayList;
 import java.util.Map;
