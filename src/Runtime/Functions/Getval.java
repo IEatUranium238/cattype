@@ -34,12 +34,6 @@ public class Getval {
       throw new Exception("Failed to get value '" + name + "' on line " + lineNum);
     }
 
-    String type = res.type;
-    
-    if (type.equals("INT")){
-      return Integer.parseInt((String) res.value);
-    } else {
-      return res.value;
-    }
+    return res.value;
   }
 }

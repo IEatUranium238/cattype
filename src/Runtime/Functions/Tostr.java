@@ -15,10 +15,10 @@ public class Tostr {
     
     Map<String, Object> param = (Map<String, Object>) content.get(0);
 
-    if (param.get("type") == "FUN") {
-      return String.valueOf(FunctionMan.manageFunction(param, lineNum));
+    if (param.get("type") != "FUN") {
+      throw new Exception("TOSTR accepts only functions on line: " + lineNum);
     }
 
-    return String.valueOf(param.get("content"));
+    return String.valueOf(FunctionMan.manageFunction(param, lineNum));
   }
 }
