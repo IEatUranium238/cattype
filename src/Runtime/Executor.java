@@ -1,0 +1,22 @@
+package Runtime;
+
+import Components.AstObj;
+
+import Runtime.Commands.*;
+
+public class Executor {
+  public static void executeAST(AstObj ast, int lineNum) throws Exception {
+    switch (ast.type) {
+      case "DEFVALUE":
+        DefHandler.defHandler(ast, lineNum);
+        break;
+      case "PRINT":
+        PrintHandler.printHandler(ast, lineNum);
+        break;
+      case "POINT":
+        break;
+      default:
+        throw new Exception("Unknown AST type: " + ast.type);
+    }
+  }
+}
