@@ -10,6 +10,9 @@ public class Executor {
       case "DEFVALUE":
         DefHandler.defHandler(ast, lineNum);
         break;
+      case "SETVALUE":
+        SetHandler.setHandler(ast, lineNum);
+        break;
       case "PRINT":
         PrintHandler.printHandler(ast, lineNum);
         break;

@@ -8,7 +8,8 @@ import Runtime.Executor;
 public class Main {
   public static void main(String[] args) {
     try {
-      ArrayList<ArrayList<String>> lines = Lexer.readFile("./testbed/test.cat");
+      String filePath = args.length > 0 ? args[0] : "./testbed/test.cat";
+      ArrayList<ArrayList<String>> lines = Lexer.readFile(filePath);
 
       int curLine = 0;
       ArrayList<AstObj> lineAst = new ArrayList<>();
@@ -19,7 +20,7 @@ public class Main {
         AstObj ast = AST.makeAst(l, curLine);
         lineAst.add(ast);
       }
-
+      
       curLine = 0;
 
       for (AstObj astObj : lineAst) {

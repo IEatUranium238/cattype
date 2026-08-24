@@ -59,6 +59,8 @@ public class AST {
         return PrintHandler.printHandler(tokens, lineNum);
       case "POINT":
         return PointHandler.pointHandler(tokens, lineNum);
+      case "SET":
+        return SetHandler.setHandler(tokens, lineNum);
       default:
         throw new Exception("Unknown command on line " + lineNum + ": " + cmd);
     }

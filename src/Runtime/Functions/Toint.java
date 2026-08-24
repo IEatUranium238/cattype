@@ -15,7 +15,7 @@ public class Toint {
     
     Map<String, Object> param = (Map<String, Object>) content.get(0);
 
-    if (param.get("type") != "FUN") {
+    if (!"FUN".equals(param.get("type"))) {
       throw new Exception("TOINT accepts only functions on line: " + lineNum);
     }
 

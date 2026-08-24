@@ -69,8 +69,8 @@ public class DefHandler {
       throw new Exception("Tried to use floating point number for value named '" + valName + "' on line " + lineNum);
     }
 
-    if (valType.equals("INT") && input.matches(".*[a-zA-Z].*")) {
-      throw new Exception("Tried create integer value named '" + valName + "' with letters on line " + lineNum);
+    if (valType.equals("INT") && input.matches(".*[a-zA-Z'\"].*")) {
+      throw new Exception("Tried create integer value named '" + valName + "' with string on line " + lineNum);
     }
 
     if (input.matches("\\d+") && valType.equals("STR")) {

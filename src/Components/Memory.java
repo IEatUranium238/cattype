@@ -24,7 +24,7 @@ public class Memory {
 
     MemObj data = vals.get(name);
 
-    if (data.value.getClass() != val.getClass()) {
+    if (data.value == null || val == null || data.value.getClass() != val.getClass()) {
       return 't';
     }
 

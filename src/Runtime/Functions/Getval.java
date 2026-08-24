@@ -18,7 +18,7 @@ public class Getval {
     @SuppressWarnings("unchecked")
     Map<String, Object> param = (Map<String, Object>) content.get(0);
 
-    if (param.get("type") != "PAR") {
+    if (!"PAR".equals(param.get("type"))) {
       throw new Exception("GETVAL accepts only values on line: " + lineNum);
     }
 
