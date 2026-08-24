@@ -3,6 +3,7 @@ package Runtime;
 import java.util.Map;
 
 import Runtime.Functions.Getval;
+import Runtime.Functions.Toint;
 import Runtime.Functions.Tostr;
 
 public class FunctionMan {
@@ -12,6 +13,8 @@ public class FunctionMan {
         return Getval.getVal(data, lineNum);
       case "TOSTR":
         return Tostr.tostr(data, lineNum);
+      case "TOINT":
+        return Toint.toint(data, lineNum);
       default:
         throw new Exception("Unknown build in function to execute: "+data.get("name"));
     }
