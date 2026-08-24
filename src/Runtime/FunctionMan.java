@@ -2,10 +2,8 @@ package Runtime;
 
 import java.util.Map;
 
-import Runtime.Functions.Getval;
-import Runtime.Functions.Toint;
-import Runtime.Functions.Tostr;
-import Runtime.Functions.Math.Add;
+import Runtime.Functions.*;
+import Runtime.Functions.Math.*;
 
 public class FunctionMan {
   public static Object manageFunction(Map<String, Object> data, int lineNum) throws Exception {
@@ -18,6 +16,16 @@ public class FunctionMan {
         return Toint.toint(data, lineNum);
       case "ADD":
         return Add.add(data, lineNum);
+      case "SUB":
+        return Sub.sub(data, lineNum);
+      case "MUL":
+        return Mul.mul(data, lineNum);
+      case "DIV":
+        return Div.div(data, lineNum);
+      case "POW":
+        return Pow.pow(data, lineNum);
+      case "ROOT":
+        return Root.root(data, lineNum);
       default:
         throw new Exception("Unknown build in function to execute: "+data.get("name"));
     }
