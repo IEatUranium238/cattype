@@ -11,7 +11,7 @@ public class PointHandler {
     tokens.removeFirst();
     
     if (tokens.size() == 0){
-      throw new Exception("No point name supplied for point creation on line " + lineNum);
+      throw new Exception("No point name supplied for deletion on line " + lineNum);
     }
 
     if (!Utils.isValidValue(tokens.get(0))){

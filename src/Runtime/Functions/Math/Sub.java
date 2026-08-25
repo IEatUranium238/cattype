@@ -51,7 +51,7 @@ public class Sub {
             "SUB accepts only INT values, got invalid value type or format from function on line: " + lineNum);
       }
     } else {
-      if (String.valueOf(paramL.get("content")).matches(".*[a-zA-Z'\"].*")) {
+      if (String.valueOf(paramR.get("content")).matches(".*[a-zA-Z'\"].*")) {
         throw new Exception(
             "SUB accepts only INT values, got invalid value type or format from input on line: " + lineNum);
       }

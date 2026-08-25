@@ -61,6 +61,8 @@ public class AST {
         return PointHandler.pointHandler(tokens, lineNum);
       case "SET":
         return SetHandler.setHandler(tokens, lineNum);
+      case "DEL":
+        return DelHandler.delHandler(tokens, lineNum);
       default:
         throw new Exception("Unknown command on line " + lineNum + ": " + cmd);
     }
