@@ -77,6 +77,10 @@ public class DefHandler {
       throw new Exception("Tried create string value named '" + valName + "' with integer on line " + lineNum);
     }
 
+    if (!(input.startsWith("\"") || input.startsWith("'")) && valType.equals("STR")) {
+      throw new Exception("Tried to use string without quoutes for value named '" + valName + "' on line " + lineNum);
+    }
+
     if (valType.equals("STR")){
       input = input.substring(1, input.length() - 1);
     }

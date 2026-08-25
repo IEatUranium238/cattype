@@ -30,8 +30,7 @@ public class Div {
             "DIV accepts only INT values, got invalid value type or format from function on line: " + lineNum);
       }
     } else {
-      if (String.valueOf(paramL.get("content")).startsWith("'")
-          || String.valueOf(paramL.get("content")).startsWith("\"")) {
+      if (String.valueOf(paramL.get("content")).matches(".*[a-zA-Z'\"].*")) {
         throw new Exception(
             "DIV accepts only INT values, got invalid value type or format from input on line: " + lineNum);
       }
@@ -52,8 +51,7 @@ public class Div {
             "DIV accepts only INT values, got invalid value type or format from function on line: " + lineNum);
       }
     } else {
-      if (String.valueOf(paramR.get("content")).startsWith("'")
-          || String.valueOf(paramR.get("content")).startsWith("\"")) {
+      if (String.valueOf(paramL.get("content")).matches(".*[a-zA-Z'\"].*")) {
         throw new Exception(
             "DIV accepts only INT values, got invalid value type or format from input on line: " + lineNum);
       }
