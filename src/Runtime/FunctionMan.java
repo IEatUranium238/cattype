@@ -4,6 +4,7 @@ import java.util.Map;
 
 import Runtime.Functions.*;
 import Runtime.Functions.Math.*;
+import Runtime.Functions.Strings.*;
 
 public class FunctionMan {
   public static Object manageFunction(Map<String, Object> data, int lineNum) throws Exception {
@@ -26,6 +27,10 @@ public class FunctionMan {
         return Pow.pow(data, lineNum);
       case "ROOT":
         return Root.root(data, lineNum);
+      case "MOD":
+        return Mod.mod(data, lineNum);
+      case "JOINSTR":
+        return Joinstr.joinstr(data, lineNum);
       default:
         throw new Exception("Unknown build in function to execute: "+data.get("name"));
     }

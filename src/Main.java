@@ -8,8 +8,18 @@ import Runtime.Executor;
 public class Main {
   public static void main(String[] args) {
     try {
-      String filePath = args.length > 0 ? args[0] : "./testbed/test.cat";
+      if (args.length == 0) {
+        System.out.println("Supply a file to exectute!");
+        return;
+      }
+
+      String filePath = args[0];
+
       ArrayList<ArrayList<String>> lines = Lexer.readFile(filePath);
+
+      if (lines == null){
+        throw new Exception("Failed to read or file is empty.");
+      }
 
       int curLine = 0;
       ArrayList<AstObj> lineAst = new ArrayList<>();
@@ -20,7 +30,7 @@ public class Main {
         AstObj ast = AST.makeAst(l, curLine);
         lineAst.add(ast);
       }
-      
+
       curLine = 0;
 
       for (AstObj astObj : lineAst) {
@@ -30,7 +40,7 @@ public class Main {
 
     } catch (Exception e) {
       System.out.println("Failed to run cattype program!\nError:\n" + e.getMessage());
-      System.err.println("-- DEBUG TRACE --");
+      System.out.println("-- DEBUG TRACE --");
       e.printStackTrace();
     }
   }
