@@ -1,1 +1,3 @@
 /testbed
+*.class
+*.jar

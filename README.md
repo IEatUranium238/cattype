@@ -20,15 +20,46 @@ It features:
 
 ### 1. Native image binary (Windows & Linux)
 
-TODO: add stuff here
+Download cattype executable for your os.
+
+Run: `./cattype cattype.jar (your cattype file path)`
+
+Or put cattype executable somewhere on PATH to use it anywhere
 
 ### 2. JAR (macOS other platforms with JVM)
 
-TODO: add stuff here
+Download JRE (Java 21+) and .jar from releases.
+Run with `java -jar cattype.jar (your cattype file path)`
 
 ### 3. Compile it yourself
 
-TODO: add stuff here
+#### .jar file
+
+- Requirements: Java 21+, bash or powershell
+
+Compile:
+
+- Bash:
+  `bash scripts/build/build.sh`
+- Powershell:
+  `powershell scripts/build/build.ps1`
+
+Run: `java -jar cattype.jar (your cattype file path)`
+
+#### Native image
+
+- Requirement: Java 21+ (Graalvm), bash or powershell
+
+Compile:
+
+- Bash:
+  `bash scripts/native/native.sh`
+- Powershell:
+  `powershell scripts/native/native.ps1`
+
+Run: `./cattype cattype.jar (your cattype file path)`
+
+Or put cattype executable somewhere on PATH to use it anywhere
 
 ## Make your first program
 Make a new file with .cat extension.
