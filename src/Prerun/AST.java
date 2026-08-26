@@ -67,6 +67,8 @@ public class AST {
         return InHandler.inHandler(tokens, lineNum);
       case "GOTO":
         return GotoHandler.gotoHandler(tokens, lineNum);
+      case "EXPLODE":
+        return ExplodeHandler.explodeHandler(tokens, lineNum);
       default:
         throw new Exception("Unknown command on line " + lineNum + ": " + cmd);
     }

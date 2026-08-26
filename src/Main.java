@@ -39,6 +39,8 @@ public class Main {
         Executor.executeAST(lineAst.get(State.curLine - 1), State.curLine);
       }
 
+      State.in.close();
+
     } catch (Exception e) {
       System.out.println("Failed to run cattype program!\nError:\n" + e.getMessage());
       System.out.println("-- INTERNAL DEBUG TRACE --");

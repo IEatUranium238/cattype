@@ -1,23 +1,19 @@
 package Runtime.Commands;
 
 import java.util.Map;
-import java.util.Scanner;
 
 import Components.AstObj;
 import Components.MemObj;
 import Components.Memory;
+import Components.State;
 
 public class InHandler {
   public static void inHandler(AstObj ast, int lineNum) throws Exception {
     Map<String, Object> data = ast.data;
 
     String name = (String) data.get("dataName");
-
-    Scanner in = new Scanner(System.in);
-
-    Object input = in.nextLine();
-
-    in.close();
+    
+    Object input = State.in.nextLine();
 
     MemObj obj = (MemObj) Memory.getData(name);
     String dataType = obj.type;

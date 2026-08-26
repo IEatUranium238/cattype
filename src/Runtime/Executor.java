@@ -29,6 +29,9 @@ public class Executor {
       case "GOTO":
         GotoHandler.gotoHandler(ast, lineNum);
         break;
+      case "EXPLODE":
+        ExplodeHandler.explodeHandler(ast, lineNum);
+        break;
       default:
         throw new Exception("Unknown AST type: " + ast.type);
     }
