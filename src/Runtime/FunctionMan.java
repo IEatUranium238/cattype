@@ -3,6 +3,7 @@ package Runtime;
 import java.util.Map;
 
 import Runtime.Functions.*;
+import Runtime.Functions.Conditions.*;
 import Runtime.Functions.Math.*;
 import Runtime.Functions.Strings.*;
 
@@ -31,6 +32,12 @@ public class FunctionMan {
         return Mod.mod(data, lineNum);
       case "JOINSTR":
         return Joinstr.joinstr(data, lineNum);
+      case "EQLS":
+        return Eqls.eqls(data, lineNum);
+      case "MR":
+        return Mr.mr(data, lineNum);
+      case "LS":
+        return Ls.ls(data, lineNum);
       default:
         throw new Exception("Unknown build in function to execute: "+data.get("name"));
     }
