@@ -38,6 +38,8 @@ public class FunctionMan {
         return Mr.mr(data, lineNum);
       case "LS":
         return Ls.ls(data, lineNum);
+      case "NOT":
+        return Not.not(data, lineNum);
       default:
         throw new Exception("Unknown build in function to execute: "+data.get("name"));
     }
