@@ -40,6 +40,8 @@ public class FunctionMan {
         return Ls.ls(data, lineNum);
       case "NOT":
         return Not.not(data, lineNum);
+      case "CMPSTR":
+        return Cmpstr.cmpstr(data, lineNum);
       default:
         throw new Exception("Unknown build in function to execute: "+data.get("name"));
     }
