@@ -1,5 +1,5 @@
 # CATTYPE
-> **C**ATTYPE - **A**sbosutly **T**errible **T**o **C**ode **E**verything
+> **C**ATTYPE - **A**bsolutely **T**errible **T**o **Y**our **P**rogramming **E**xperience
 
 CATTYPE is an esoteric programming language inspired by old programming languages such as COBOL, FORTRAN, and BASIC. It takes the worst parts of all three and somehow makes them even worse.
 
