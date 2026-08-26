@@ -1,3 +1,5 @@
 /testbed
 *.class
 *.jar
+cattype
+cattype.exe
