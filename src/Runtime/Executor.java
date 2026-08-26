@@ -26,6 +26,9 @@ public class Executor {
       case "INPUT":
         InHandler.inHandler(ast, lineNum);
         break;
+      case "GOTO":
+        GotoHandler.gotoHandler(ast, lineNum);
+        break;
       default:
         throw new Exception("Unknown AST type: " + ast.type);
     }

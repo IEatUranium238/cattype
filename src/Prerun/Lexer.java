@@ -85,15 +85,13 @@ public class Lexer {
     }
 
     if (inString) {
-      throw new Exception("Open string on " + lineNum + ":" + line.length() + " :\n  " + line + "\n  "
-          + "~".repeat(line.length()) + "^");
+      throw new Exception("Open string on " + lineNum + ":" + line.length() + " :\n  " + line);
     }
 
     if (!openParenPositions.isEmpty()) {
       int pos = openParenPositions.get(openParenPositions.size() - 1);
 
-      throw new Exception("Open parenthesis on " + lineNum + ":" + pos + "\n  " + line + "\n  " + "~".repeat(pos)
-          + "^" + "~".repeat(line.length() - pos - 1) + "^");
+      throw new Exception("Open parenthesis on " + lineNum + ":" + pos + "\n  " + line);
     }
 
     return tokens;

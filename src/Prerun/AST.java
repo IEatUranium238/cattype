@@ -65,6 +65,8 @@ public class AST {
         return DelHandler.delHandler(tokens, lineNum);
       case "IN":
         return InHandler.inHandler(tokens, lineNum);
+      case "GOTO":
+        return GotoHandler.gotoHandler(tokens, lineNum);
       default:
         throw new Exception("Unknown command on line " + lineNum + ": " + cmd);
     }

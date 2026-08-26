@@ -4,10 +4,9 @@ import Prerun.AST;
 import Components.AstObj;
 import Prerun.Lexer;
 import Runtime.Executor;
+import Components.State;
 
 public class Main {
-  public static boolean working = true;
-
   public static void main(String[] args) {
     try {
       if (args.length == 0) {
@@ -23,30 +22,26 @@ public class Main {
         throw new Exception("Failed to read or file is empty.");
       }
 
-      int curLine = 0;
       ArrayList<AstObj> lineAst = new ArrayList<>();
 
       for (ArrayList<String> l : lines) {
-        curLine += 1;
+        State.curLine += 1;
 
-        AstObj ast = AST.makeAst(l, curLine);
+        AstObj ast = AST.makeAst(l, State.curLine);
         lineAst.add(ast);
       }
 
-      curLine = 0;
+      State.curLine = 0;
+      State.linesAmount = lineAst.size();
 
-      for (AstObj astObj : lineAst) {
-        if (!working){
-          return;
-        }
-        
-        curLine += 1;
-        Executor.executeAST(astObj, curLine);
+      while (State.working && (State.curLine < State.linesAmount)) {
+        State.curLine += 1;
+        Executor.executeAST(lineAst.get(State.curLine - 1), State.curLine);
       }
 
     } catch (Exception e) {
       System.out.println("Failed to run cattype program!\nError:\n" + e.getMessage());
-      System.out.println("-- DEBUG TRACE --");
+      System.out.println("-- INTERNAL DEBUG TRACE --");
       e.printStackTrace();
     }
   }
