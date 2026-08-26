@@ -23,6 +23,9 @@ public class Executor {
       case "DEL":
         DelHandler.delHandler(ast, lineNum);
         break;
+      case "INPUT":
+        InHandler.inHandler(ast, lineNum);
+        break;
       default:
         throw new Exception("Unknown AST type: " + ast.type);
     }
