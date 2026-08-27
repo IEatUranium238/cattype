@@ -13,7 +13,11 @@ native-image `
     --no-fallback `
     -O3 `
     --gc=serial `
+    -march=native `
     --enable-url-protocols=http,https `
+    -H:+UnlockExperimentalVMOptions `
+    -H:+RemoveSaturatedTypeFlows `
+    -H:+ReportExceptionStackTraces `
     -cp "build/classes" `
     Main `
     cattype

@@ -13,6 +13,7 @@ native-image \
     --no-fallback \
     -O3 \
     --gc=serial \
+    -march=native\
     -H:+UnlockExperimentalVMOptions \
     -H:+RemoveSaturatedTypeFlows \
     -H:+ReportExceptionStackTraces \

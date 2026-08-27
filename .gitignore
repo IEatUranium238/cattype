@@ -1,4 +1,5 @@
 /testbed
+/build
 *.class
 *.jar
 cattype

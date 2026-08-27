@@ -32,6 +32,9 @@ public class Executor {
       case "EXPLODE":
         ExplodeHandler.explodeHandler(ast, lineNum);
         break;
+      case "SLEEP":
+        SleepHandler.sleepHandler(ast, lineNum);
+        break;
       default:
         throw new Exception("Unknown AST type: " + ast.type);
     }

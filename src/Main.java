@@ -10,7 +10,7 @@ public class Main {
   public static void main(String[] args) {
     try {
       if (args.length == 0) {
-        System.out.println("Supply a file to exectute!");
+        System.out.println("Supply a file to execute!");
         return;
       }
 
