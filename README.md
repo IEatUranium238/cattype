@@ -22,7 +22,9 @@ It features:
 
 Download cattype executable for your os.
 
-Run: `./cattype cattype.jar (your cattype file path)`
+Run (example): `./cattype (your cattype file path)`
+
+> NOTE: cattype command may vary based on executable downloaded
 
 Or put cattype executable somewhere on PATH to use it anywhere
 

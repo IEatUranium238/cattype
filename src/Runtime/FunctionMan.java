@@ -42,6 +42,12 @@ public class FunctionMan {
         return Not.not(data, lineNum);
       case "CMPSTR":
         return Cmpstr.cmpstr(data, lineNum);
+      case "STRSIZE":
+        return Strsize.strsize(data, lineNum);
+      case "GETCHARAT":
+        return Getcharat.getcharat(data, lineNum);
+      case "CHARFROMINT":
+        return Charfromint.charfromint(data, lineNum);
       default:
         throw new Exception("Unknown build in function to execute: "+data.get("name"));
     }

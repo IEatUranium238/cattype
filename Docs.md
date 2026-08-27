@@ -472,3 +472,51 @@ Alongside with:
   ```
   TOSTR!(GETVAL!(x));
   ```
+
+### STRSIZE
+
+- **Description:** Returns size of a STR.
+- **Returns:** INT
+
+- **Usage:**
+
+  ```
+  STRSIZE!(([FUN] STR));
+  ```
+
+- **Example code:**
+  ```
+  STRSIZE!(GETVAL!(x));
+  ```
+
+### GETCHARAT
+
+- **Description:** Returns character at position in the STR starting from 0.
+- **Returns:** STR
+
+- **Usage:**
+
+  ```
+  GETCHARAT!(([FUN] STR) ([IMD] INT | [FUN] INT ));
+  ```
+
+- **Example code:**
+  ```
+  GETCHARAT!(GETVAL!(x) 1);
+  ```
+
+### CHARFROMINT
+
+- **Description:** Returns a character from INT code.
+- **Returns:** STR
+
+- **Usage:**
+
+  ```
+  CHARFROMINT!(([IMD] INT | [FUN] INT));
+  ```
+
+- **Example code:**
+  ```
+  CHARFROMINT!(65);
+  ```
