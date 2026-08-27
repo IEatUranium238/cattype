@@ -200,6 +200,21 @@ Alongside with:
   SET x TO ADD!(GETVAL!(x) 5);
   ```
 
+### SLEEP
+
+- **Description:** Sleeps for some amount of seconds.
+
+- **Usage:**
+
+  ```
+  SLEEP ([IMD] INT | [FUN] INT);
+  ```
+
+- **Example code:**
+  ```
+  SLEEP 5;
+  ```
+
 ## List of build in functions
 
 ### ADD
