@@ -48,6 +48,8 @@ public class FunctionMan {
         return Getcharat.getcharat(data, lineNum);
       case "CHARFROMINT":
         return Charfromint.charfromint(data, lineNum);
+      case "CHARTOINT":
+        return Chartoint.inttochar(data, lineNum);
       default:
         throw new Exception("Unknown build in function to execute: "+data.get("name"));
     }

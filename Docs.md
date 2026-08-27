@@ -249,6 +249,22 @@ Alongside with:
   CHARFROMINT!(65);
   ```
 
+### CHARTOINT
+
+- **Description:** Returns a INT from character code.
+- **Returns:** INT
+
+- **Usage:**
+
+  ```
+  CHARTOINT!(([FUN] STR));
+  ```
+
+- **Example code:**
+  ```
+  CHARTOINT!(GETVAL!(x));
+  ```
+
 ### CMPSTR
 
 - **Description:** Compares 2 strings if they are equal.
