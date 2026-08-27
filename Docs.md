@@ -454,7 +454,7 @@ Alongside with:
 
 - **Example code:**
   ```
-  POW!(GETVAL!(x) 1);
+  POW!(GETVAL!(x) 2);
   ```
 
 ### ROOT
@@ -470,7 +470,7 @@ Alongside with:
 
 - **Example code:**
   ```
-  ROOT!(GETVAL!(x) 1);
+  ROOT!(GETVAL!(x) 2);
   ```
 
 ### STRSIZE
