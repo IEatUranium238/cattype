@@ -20,7 +20,7 @@ It features:
 
 ### 1. Native image binary (Windows & Linux)
 
-Download cattype executable for your os.
+Download cattype executable for your os from releases.
 
 Run (example): `./cattype (your cattype file path)`
 
