@@ -233,6 +233,22 @@ Alongside with:
   ADD!(GETVAL!(x) 1);
   ```
 
+### CHARFROMINT
+
+- **Description:** Returns a character from INT code.
+- **Returns:** STR
+
+- **Usage:**
+
+  ```
+  CHARFROMINT!(([IMD] INT | [FUN] INT));
+  ```
+
+- **Example code:**
+  ```
+  CHARFROMINT!(65);
+  ```
+
 ### CMPSTR
 
 - **Description:** Compares 2 strings if they are equal.
@@ -279,6 +295,22 @@ Alongside with:
 - **Example code:**
   ```
   EQLS!(GETVAL!(x) 5);
+  ```
+
+### GETCHARAT
+
+- **Description:** Returns character at position in the STR starting from 0.
+- **Returns:** STR
+
+- **Usage:**
+
+  ```
+  GETCHARAT!(([FUN] STR) ([IMD] INT | [FUN] INT ));
+  ```
+
+- **Example code:**
+  ```
+  GETCHARAT!(GETVAL!(x) 1);
   ```
 
 ### GETVAL
@@ -425,6 +457,22 @@ Alongside with:
   ROOT!(GETVAL!(x) 1);
   ```
 
+### STRSIZE
+
+- **Description:** Returns size of a STR.
+- **Returns:** INT
+
+- **Usage:**
+
+  ```
+  STRSIZE!(([FUN] STR));
+  ```
+
+- **Example code:**
+  ```
+  STRSIZE!(GETVAL!(x));
+  ```
+
 ### SUB
 
 - **Description:** Substracts 2 numbers.
@@ -471,52 +519,4 @@ Alongside with:
 - **Example code:**
   ```
   TOSTR!(GETVAL!(x));
-  ```
-
-### STRSIZE
-
-- **Description:** Returns size of a STR.
-- **Returns:** INT
-
-- **Usage:**
-
-  ```
-  STRSIZE!(([FUN] STR));
-  ```
-
-- **Example code:**
-  ```
-  STRSIZE!(GETVAL!(x));
-  ```
-
-### GETCHARAT
-
-- **Description:** Returns character at position in the STR starting from 0.
-- **Returns:** STR
-
-- **Usage:**
-
-  ```
-  GETCHARAT!(([FUN] STR) ([IMD] INT | [FUN] INT ));
-  ```
-
-- **Example code:**
-  ```
-  GETCHARAT!(GETVAL!(x) 1);
-  ```
-
-### CHARFROMINT
-
-- **Description:** Returns a character from INT code.
-- **Returns:** STR
-
-- **Usage:**
-
-  ```
-  CHARFROMINT!(([IMD] INT | [FUN] INT));
-  ```
-
-- **Example code:**
-  ```
-  CHARFROMINT!(65);
   ```
