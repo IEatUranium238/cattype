@@ -20,7 +20,7 @@ It features:
 
 ### 1. Native image binary (Windows & Linux)
 
-Download cattype executable for your os from [releases](https://github.com/IEatUranium238/cattype/releases/tag/Latest).
+Download cattype executable for your os from [releases](https://github.com/IEatUranium238/cattype/releases).
 
 Run (example): `./cattype (your cattype file path)`
 
@@ -30,7 +30,7 @@ Or put cattype executable somewhere on PATH to use it anywhere
 
 ### 2. JAR (macOS other platforms with JVM)
 
-Download JRE (Java 21+) and .jar from [releases](https://github.com/IEatUranium238/cattype/releases/tag/Latest).
+Download JRE (Java 21+) and .jar from [releases](https://github.com/IEatUranium238/cattype/releases).
 Run with `java -jar cattype.jar (your cattype file path)`
 
 ### 3. Compile it yourself
