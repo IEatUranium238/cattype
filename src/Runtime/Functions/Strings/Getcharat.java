@@ -46,6 +46,6 @@ public class Getcharat {
       throw new Exception("GETCHARAT got non-INT data from function for second param on line: " + lineNum);
     }
 
-    return String.valueOf(resL).charAt(Integer.parseInt(String.valueOf(resR)));
+    return String.valueOf(String.valueOf(resL).charAt(Integer.parseInt(String.valueOf(resR))));
   }
 }

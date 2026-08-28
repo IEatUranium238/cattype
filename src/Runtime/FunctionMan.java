@@ -50,6 +50,8 @@ public class FunctionMan {
         return Charfromint.charfromint(data, lineNum);
       case "CHARTOINT":
         return Chartoint.inttochar(data, lineNum);
+      case "RAND":
+        return Rand.rand(data, lineNum);
       default:
         throw new Exception("Unknown build in function to execute: "+data.get("name"));
     }

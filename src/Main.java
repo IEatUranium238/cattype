@@ -35,8 +35,8 @@ public class Main {
       State.linesAmount = lineAst.size();
 
       while (State.working && (State.curLine < State.linesAmount)) {
+        Executor.executeAST(lineAst.get(State.curLine), State.curLine);
         State.curLine += 1;
-        Executor.executeAST(lineAst.get(State.curLine - 1), State.curLine);
       }
 
       State.in.close();

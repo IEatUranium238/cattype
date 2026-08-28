@@ -33,7 +33,7 @@ public class Getval {
     if (res == null) {
       throw new Exception("Value '" + name + "' does not exist on line " + lineNum);
     }
-
+    
     String type = res.type;
     if (type.equals("STR")){
       return String.valueOf(res.value);

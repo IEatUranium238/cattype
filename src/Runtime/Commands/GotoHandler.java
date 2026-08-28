@@ -28,14 +28,16 @@ public class GotoHandler {
       }
     }
 
+    gotoline -= 1;
+
     if (!((boolean) data.get("hasCondition"))) {
-      if (gotoline > State.linesAmount || gotoline < 1) {
+      if (gotoline > State.linesAmount || gotoline < 0) {
         throw new Exception("GOTO got out of bounds line number to jump to on line " + lineNum);
       }
       State.curLine = gotoline;
       return;
     }
-
+    
     int condition;
 
     if (data.get("conditionMode").equals("FUN")) {
@@ -54,7 +56,7 @@ public class GotoHandler {
     }
 
     if (condition > 0) {
-      if (gotoline > State.linesAmount || gotoline < 1) {
+      if (gotoline > State.linesAmount || gotoline < 0) {
         throw new Exception("GOTO got out of bounds line number to jump to on line " + lineNum);
       }
       State.curLine = gotoline;

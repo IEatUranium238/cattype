@@ -457,6 +457,22 @@ Alongside with:
   POW!(GETVAL!(x) 1);
   ```
 
+### RAND
+
+- **Description:** Returns a random number between 1st and 2nd param.
+- **Returns:** INT
+
+- **Usage:**
+
+  ```
+  RAND!(([IMD] INT | [FUN] INT) ([IMD] INT | [FUN] INT));
+  ```
+
+- **Example code:**
+  ```
+  RAND!(GETVAL!(x) 100);
+  ```
+
 ### ROOT
 
 - **Description:** 2nd number root of 1st number, rounded to nearest INT.

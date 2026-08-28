@@ -16,7 +16,7 @@ public class PrintHandler {
       Map<String, Object> functionData = (Map<String, Object>) data.get("data");
 
       Object returned = FunctionMan.manageFunction(functionData, lineNum);
-
+      
       if (returned instanceof String){
         System.out.println((String) returned);
       } else {
